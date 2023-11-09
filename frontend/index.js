@@ -4,6 +4,9 @@ const port = 3000;
 
 //DataBase Json File setup
 const Estore = require("./database/data.json");
+let EstoreData = Estore.products;
+
+
 
 
 //define path
@@ -19,10 +22,9 @@ app.set("view engine","ejs");
 app.use(express.static(path.join(__dirname,"public")));
 
 
-
 // render main page
 app.get("/",(req,res)=>{
-    res.render("main");
+    res.render("main",{EstoreData});
 })
 
 app.listen(port,(req,res)=>{
