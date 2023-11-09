@@ -8,3 +8,7 @@ body{
     margin: 1rem;
     overflow: hidden;
 }
+.button{
+    position: absolute;
+    bottom: 10px;
+}
