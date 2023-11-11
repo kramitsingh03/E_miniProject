@@ -26,6 +26,10 @@ app.use(express.static(path.join(__dirname,"public")));
 app.get("/",(req,res)=>{
     res.render("main",{EstoreData});
 })
+// render product page
+app.get("/product.ejs",(req,res)=>{
+    res.render("product");
+})
 
 app.listen(port,(req,res)=>{
     console.log(`listening to port ${port}`);
